@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift");
+
+
+.bg_image1 {
+    background-image: url(./components/Assets/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg_image2 {
+  background-image: url(./components/Assets/bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
+
+.particle_image {
+  background-image: url(./components/Assets/particles.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* background-blend-mode: screen; */
+}
+
+
+
+
+

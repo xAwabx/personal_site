@@ -68,7 +68,7 @@ export default function App() {
         <div id="vanta" className="absolute inset-0 z-0 h-[100vh]" />
         <Home onclickabout={handleAbout} onclickwork={handleWork} />
       </section>
-      <section
+      {/* <section
         className="flex flex-col justify-between pl-[10vw] py-[8vh] bg_image2 h-[100vh] snap-center"
         ref={refAbout}
       >
@@ -80,7 +80,7 @@ export default function App() {
       </section>
       <section className="bg_image2 h-[100vh] snap-center flex items-center">
         <Contact />
-      </section>
+      </section> */}
     </div>
   );
 }

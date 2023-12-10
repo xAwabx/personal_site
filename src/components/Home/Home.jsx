@@ -29,32 +29,35 @@ export default function Home({ onclickabout, onclickwork }) {
 
   return (
     <div>
-      <div className="pl-[7vw] flex flex-col ">
-        <div className="flex flex-row gap-[6vw] text-[1.5vw] text-white pt-10 pl-[3.5vw]">
+      <div className="lg:pl-[7vw] flex flex-col ">
+        <div className="flex flex-row text-white gap-[7vw] text-2xl ml-auto mr-auto mt-5 lg:m-0 lg:gap-[6vw] lg:text-[1.5vw] lg:pt-10 lg:pl-[3.5vw]">
           <NavButton text={"About"} timer={0} onclick={onclickabout} />
           <NavButton text={"Skills"} timer={0.4} onclick={onclickabout} />
           <NavButton text={"Work"} timer={0.8} onclick={onclickwork} />
           <NavButton text={"Contact"} timer={1.2} />
         </div>
 
-        <motion.div style={{ y: 0 }} className="flex flex-col pt-[15vh] gap-2">
+        <motion.div
+          style={{ y: 0 }}
+          className="flex flex-col pt-[20vh] md:pt-[10vh] mx-auto lg:m-0 lg:pt-[15vh] lg:gap-2"
+        >
           <motion.div
             variants={variant}
             initial="initial"
             animate="animate"
-            className="flex flex-row text-[5vw] text-white font-bold"
+            className="flex flex-row text-center text-[12vw] md:text-[10vw] lg:text-[5vw]  text-white font-bold"
           >
             <h1 className=" drop-shadow-glow ">
               <span className="text-[#b31616]">&lt;</span>
-              Muhammad
-              <span className=""> Awab</span> Saghir
+              <span className="hidden lg:inline">Muhammad </span>
+              <span className="">Awab</span> Saghir
               <span className="text-[#b31616]">&gt;</span>
             </h1>
           </motion.div>
 
           <SubText />
 
-          <div className="relative flex flex-row  text-white pl-[3.5vw] justify-between w-[15vw] text-2xl pt-5 !z-[10000]  pointer-events-auto">
+          <div className="relative flex flex-row text-white !z-[10000] pointer-events-auto justify-center gap-11 pt-[35vh] text-2xl md:pt-[29vh] md:text-3xl lg:pl-[3.5vw] lg:gap-0 lg:w-[15vw] lg:justify-between lg:text-3xl lg:pt-5">
             <SocialButton
               link={"https://www.instagram.com/awab_ghouri/"}
               icon={faInstagram}

@@ -26,23 +26,21 @@ export const Skill = () => {
 
   const variants = {
     textbox: {
-      hidden: { opacity: 0, y: -100 },
+      hidden: { opacity: 0, y: -30 },
       visible: {
         opacity: 1,
-
         y: 0,
-        transition: { delay: 0.8, type: "spring", bounce: 0.4 },
+        transition: { delay: 0.4, duration: 0.4 },
       },
     },
     heading: {
-      hidden: { opacity: 0, scale: 0 },
+      hidden: { opacity: 0, y: 20 },
       visible: {
         opacity: 1,
-        scale: 1,
+        y: 0,
         transition: {
-          delay: 0.5,
-          type: "spring",
-          bounce: 0.01,
+          delay: 0.1,
+          duration: 0.4,
         },
       },
     },

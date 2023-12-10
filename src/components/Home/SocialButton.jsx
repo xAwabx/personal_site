@@ -21,7 +21,8 @@ export default function SocialButton({ link, icon, timer }) {
     <motion.a
       variants={variants}
       initial="initial"
-      animate="animate"
+      whileInView="animate"
+      viewport={{ once: true }}
       href={link}
       className="group transform ease-out duration-200 "
       target="_blank"

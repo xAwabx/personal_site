@@ -1,39 +1,94 @@
-import React, { useEffect } from "react";
-import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionValueEvent,
-} from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
-export const Project = ({ projectData }) => {
-  const ref = useRef();
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const yText = useTransform(scrollYProgress, [0, 1], [300, -300]);
+export const Project = ({ projectData, Data }) => {
+  const Variants = {
+    buttonVariant: {
+      notHovered: {
+        scale: 1,
+      },
+      hovered: {
+        scale: 1.01,
+      },
+    },
+    notHovered: {
+      scale: 1,
+    },
+    hovered: {
+      scale: 1.2,
+    },
+  };
 
   return (
-    <motion.section
-      ref={ref}
-      className=" h-[100%] snap-center bg_image1 text-white"
-    >
-      <div className="h-[100vh] flex items-center ">
-        <div className="flex flex-row mx-auto gap-5 items-center">
-          <motion.div className="bg-red-500 h-[40vh] w-[60vh] rounded-lg" />
+    <section ref={projectData.ref} className=" text-white snap-center mx-20">
+      <div className="h-[70vh] w-[100vw] flex flex-col justify-center">
+        <div className="flex flex-row mx-auto gap-10 items-center">
           <motion.div
-            style={{ y: yText }}
-            className="flex flex-col gap-5 max-w-[50vh]"
+            variants={Variants}
+            initial="notHovered"
+            whileHover="hovered"
           >
-            <h1 className="text-5xl font-bold">{projectData.heading}</h1>
-            <p className="text-2xl font-thin">{projectData.desc}</p>
+            <MdArrowDropDown
+              size={100}
+              className="px-2 ml-auto mr-auto rotate-90 cursor-pointer"
+              onClick={() => {
+                if (projectData != Data[0]) {
+                  Data[projectData.id - 2].ref.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                } else {
+                  Data[Data.length - 1].ref.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            />
+          </motion.div>
+          <img
+            src={projectData.img_url}
+            alt=""
+            className="h-[50vh] w-[70vh] rounded-xl"
+          />
+          <div className="flex flex-col gap-5 max-w-[50vh]">
+            <h1 className="text-5xl font-light">{projectData.heading}</h1>
+            <p className="text-2xl font-thin min-h-[15vh]">
+              {projectData.desc}
+            </p>
+
+            <motion.button
+              variants={Variants.buttonVariant}
+              initial="notHovered"
+              whileHover="hovered"
+              className="bg-[#b31616] text-white font-bold text-2xl rounded-3xl p-4"
+            >
+              <FaExternalLinkAlt className="mx-auto" />
+            </motion.button>
+          </div>
+          <motion.div
+            variants={Variants}
+            initial="notHovered"
+            whileHover="hovered"
+          >
+            <MdArrowDropDown
+              size={100}
+              className="px-2 ml-auto mr-auto rotate-[-90deg] cursor-pointer"
+              onClick={() => {
+                if (projectData.id != Data.length) {
+                  Data[projectData.id].ref.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                } else {
+                  Data[0].ref.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            />
           </motion.div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };

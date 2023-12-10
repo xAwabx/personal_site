@@ -14,7 +14,7 @@ import {
 } from "framer-motion";
 // import { useRef, useEffect } from "react";
 
-export default function Home({ onclickabout }) {
+export default function Home({ onclickabout, onclickwork }) {
   const variant = {
     initial: {
       opacity: 0,
@@ -33,7 +33,7 @@ export default function Home({ onclickabout }) {
         <div className="flex flex-row gap-[6vw] text-[1.5vw] text-white pt-10 pl-[3.5vw]">
           <NavButton text={"About"} timer={0} onclick={onclickabout} />
           <NavButton text={"Skills"} timer={0.4} onclick={onclickabout} />
-          <NavButton text={"Work"} timer={0.8} />
+          <NavButton text={"Work"} timer={0.8} onclick={onclickwork} />
           <NavButton text={"Contact"} timer={1.2} />
         </div>
 

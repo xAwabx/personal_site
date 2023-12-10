@@ -8,23 +8,21 @@ export default function About() {
 
   const variants = {
     textbox: {
-      hidden: { opacity: 0, y: -100 },
+      hidden: { opacity: 0, y: -30 },
       visible: isInViewHeading && {
         opacity: 1,
-
         y: 0,
-        transition: { delay: 0.4, type: "spring", bounce: 0.4 },
+        transition: { delay: 0.4, duration: 0.4 },
       },
     },
     heading: {
-      hidden: { opacity: 0, scale: 0 },
+      hidden: { opacity: 0, y: 20 },
       visible: isInViewHeading && {
         opacity: 1,
-        scale: 1,
+        y: 0,
         transition: {
           delay: 0.1,
-          type: "spring",
-          bounce: 0.1,
+          duration: 0.4,
         },
       },
     },
@@ -49,7 +47,8 @@ export default function About() {
         whileHover={{
           scale: 1.01,
           transition: {
-            type: "spring",
+            ease: "linear",
+            duration: 0.2,
           },
         }}
         className=" p-10 w-[60vw] rounded-2xl text-center bg-black bg-opacity-50 "

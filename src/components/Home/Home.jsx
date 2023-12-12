@@ -6,13 +6,7 @@ import {
 import NavButton from "./NavButton";
 import SocialButton from "./SocialButton";
 import SubText from "./SubText";
-import {
-  motion,
-  // useTransform,
-  // useScroll,
-  // useMotionValueEvent,
-} from "framer-motion";
-// import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Home({ onclickabout, onclickwork }) {
   const variant = {

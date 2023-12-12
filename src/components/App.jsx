@@ -68,14 +68,14 @@ export default function App() {
         <div id="vanta" className="absolute inset-0 z-0 h-[100vh]" />
         <Home onclickabout={handleAbout} onclickwork={handleWork} />
       </section>
-      {/* <section
-        className="flex flex-col justify-between pl-[10vw] py-[8vh] bg_image2 h-[100vh] snap-center"
+      <section
+        className="flex flex-col justify-evenly lg:justify-between bg_image2 h-[100vh] snap-center px-[7vw]  lg:pl-[10vw] lg:py-[8vh]"
         ref={refAbout}
       >
         <About />
         <Skill />
       </section>
-      <section className="bg_image1 h-[100vh] snap-center">
+      {/* <section className="bg_image1 h-[100vh] snap-center">
         <Work projects={projects} />
       </section>
       <section className="bg_image2 h-[100vh] snap-center flex items-center">

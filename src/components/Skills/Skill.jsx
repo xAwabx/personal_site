@@ -55,7 +55,7 @@ export const Skill = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="flex  text-[#b31616] text-[6vh] pl-[5vh] mb-[2vh] pr-auto pl-auto"
+        className="text-[#b31616] text-[9vw] md:text-[6vw] text-center lg:text-start mb-[2vh] lg:text-[6vh] lg:pl-[5vh] lg:mb-[2vh]"
       >
         &lt;
         <span className="text-white font-semibold ">My Skills</span>
@@ -67,7 +67,7 @@ export const Skill = () => {
         whileInView="visible"
         whileHover={{ scale: 1.01, transition: { type: "spring" } }}
         viewport={{ once: true }}
-        className=" flex flex-row p-10 gap-3 rounded-2xl bg-black bg-opacity-50  w-[60vw]"
+        className=" flex flex-row rounded-2xl bg-black bg-opacity-50 p-3 gap-1 md:gap-3 md:p-10 lg:p-10 lg:gap-3 lg:w-[60vw]"
       >
         <SectionTag heading="Front-end" data={frontEnd} />
         <SectionTag heading="Languages" data={languages} />

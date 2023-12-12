@@ -35,7 +35,7 @@ export default function About() {
         variants={variants.heading}
         initial="hidden"
         animate="visible"
-        className=" text-[#b31616] text-[6vh] pl-[5vh] mb-[2vh]"
+        className=" text-[#b31616] text-[9vw] md:text-[6vw] text-center lg:text-start mb-[2vh] lg:text-[6vh] lg:pl-[5vh] lg:mb-[2vh]"
       >
         &lt;
         <span className="text-white font-semibold">About</span>&gt;
@@ -51,9 +51,9 @@ export default function About() {
             duration: 0.2,
           },
         }}
-        className=" p-10 w-[60vw] rounded-2xl text-center bg-black bg-opacity-50 "
+        className=" rounded-2xl text-center bg-black bg-opacity-50 lg:p-10 lg:w-[60vw] "
       >
-        <p className="relative text-4xl text-white font-thin opacity-100">
+        <p className="relative text-white font-thin opacity-100 text-[2vh] md:text-[3vh] lg:text-[1.8vw]">
           <span className="text-[#b31616] font-semibold ">Hey</span> there 👋,
           I'm
           <span className="font-bold"> Muhammad Awab Saghir</span>, a

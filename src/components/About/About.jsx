@@ -54,14 +54,12 @@ export default function About() {
         className=" rounded-2xl text-center bg-black bg-opacity-50 lg:p-10 lg:w-[60vw] "
       >
         <p className="relative text-white font-thin opacity-100 text-[2vh] md:text-[3vh] lg:text-[1.8vw]">
-          <span className="text-[#b31616] font-semibold ">Hey</span> there 👋,
-          I'm
+          <span className="text-[#b31616] font-semibold ">Hello</span> 👋, I'm
           <span className="font-bold"> Muhammad Awab Saghir</span>, a
-          17-year-old budding coder hailing from the vibrant tech scene of{" "}
-          <span className="text-[#b31616] font-semibold ">Pakistan</span>. My
-          journey in the world of computers and technology has been nothing
-          short of thrilling, fueled by a genuine passion for all things
-          digital.
+          17-year-old aspiring coder from the dynamic tech scene of
+          <span className="text-[#b31616] font-semibold "> Pakistan</span>. My
+          journey in the world of computers and technology has been exciting,
+          driven by a genuine passion for all things digital.
         </p>
       </motion.div>
     </div>

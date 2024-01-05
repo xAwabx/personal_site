@@ -29,7 +29,7 @@ export const Tag = ({ text, index }) => {
       }}
       className={`${
         isHover ? "text-white bg-[#b31616]" : "text-black bg-white"
-      } text-sm px-2 py-1 rounded-md  md:px-4 md:py-2 md:rounded-xl md:text-lg font-mono border-black border-[0.1px] cursor-default`}
+      } text-sm bg-gradient-to-r from-red-700 via-red-600 to-red-700 px-1 py-1 rounded-md  md:px-2 md:py-1 font-bold md:rounded-md md:text-lg font-mono border-black border-[0.1px] cursor-default`}
     >
       {text}
     </motion.li>

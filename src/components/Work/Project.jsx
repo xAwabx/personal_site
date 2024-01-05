@@ -22,17 +22,16 @@ export const Project = ({ projectData, Data }) => {
   };
 
   return (
-    <section ref={projectData.ref} className=" text-white snap-center mx-20">
-      <div className="h-[70vh] w-[100vw] flex flex-col justify-center">
-        <div className="flex flex-row mx-auto gap-10 items-center">
-          <motion.div
-            variants={Variants}
-            initial="notHovered"
-            whileHover="hovered"
-          >
+    <section
+      ref={projectData.ref}
+      className=" text-white snap-center py-[10vw] lg:p-0"
+    >
+      <div className="h-[70vh] w-[100vw] flex flex-col justify-center overflow-y-hidden">
+        <div className="flex flex-col lg:flex-row mx-auto gap-10 items-center">
+          <div variants={Variants} initial="notHovered" whileHover="hovered">
             <MdArrowDropDown
               size={100}
-              className="px-2 ml-auto mr-auto rotate-90 cursor-pointer"
+              className="px-2 ml-auto hidden lg:block mr-auto rotate-90 cursor-pointer"
               onClick={() => {
                 if (projectData != Data[0]) {
                   Data[projectData.id - 2].ref.current?.scrollIntoView({
@@ -45,15 +44,17 @@ export const Project = ({ projectData, Data }) => {
                 }
               }}
             />
-          </motion.div>
+          </div>
           <img
             src={projectData.img_url}
             alt=""
-            className="h-[50vh] w-[70vh] rounded-xl"
+            className="h-[20vh] w-[90vw] md:h-[50vh] md:w-[50vw] rounded-xl"
           />
-          <div className="flex flex-col gap-5 max-w-[50vh]">
-            <h1 className="text-5xl font-light">{projectData.heading}</h1>
-            <p className="text-2xl font-thin min-h-[15vh]">
+          <div className="text-center flex flex-col gap-5 px-10 lg:text-start lg:gap-5 lg:max-w-[50vh]">
+            <h1 className="font-bold text-2xl lg:text-5xl lg:font-light">
+              {projectData.heading}
+            </h1>
+            <p className="text-lg p-2 max-h-[10vh] md:max-h-full md:overflow-y-hidden overflow-y-scroll lg:text-2xl font-thin min-h-[15vh]">
               {projectData.desc}
             </p>
 
@@ -61,19 +62,19 @@ export const Project = ({ projectData, Data }) => {
               variants={Variants.buttonVariant}
               initial="notHovered"
               whileHover="hovered"
+              onClick={() => {
+                console.log(projectData.link);
+                window.open(projectData.link, "_blank");
+              }}
               className="bg-[#b31616] text-white font-bold text-2xl rounded-3xl p-4"
             >
               <FaExternalLinkAlt className="mx-auto" />
             </motion.button>
           </div>
-          <motion.div
-            variants={Variants}
-            initial="notHovered"
-            whileHover="hovered"
-          >
+          <div variants={Variants} initial="notHovered" whileHover="hovered">
             <MdArrowDropDown
               size={100}
-              className="px-2 ml-auto mr-auto rotate-[-90deg] cursor-pointer"
+              className="px-2 ml-auto hidden lg:block mr-auto rotate-[-90deg] cursor-pointer"
               onClick={() => {
                 if (projectData.id != Data.length) {
                   Data[projectData.id].ref.current?.scrollIntoView({
@@ -86,7 +87,7 @@ export const Project = ({ projectData, Data }) => {
                 }
               }}
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

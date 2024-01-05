@@ -6,7 +6,7 @@ import { Contact } from "./Contact/Contact";
 import DOTS from "vanta/src/vanta.dots";
 import { useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import pic1 from "./Assets/Project_Thumbnails/pic1.jpg";
+import pic1 from "./Assets/Project_Thumbnails/TODO_Thumbnail.PNG";
 import pic2 from "./Assets/Project_Thumbnails/pic2.jpg";
 import pic3 from "./Assets/Project_Thumbnails/pic3.jpg";
 
@@ -18,21 +18,16 @@ export default function App() {
       id: 1,
       heading: "TODO APP",
       img_url: pic1,
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid alias cumque maiores quam debitis possimus quae quis dolore quibusdam qui aspernatur illo officiis totam quaerat velit sed iusto, ea delectus?",
+      link: "https://todo-ify-app.netlify.app",
+      desc: "A user-friendly web application designed to help you effortlessly manage your to-do list. Developed using the powerful MERN stack, this platform ensures seamless organization and tracking of tasks, providing a streamlined and efficient task management solution.",
       ref: useRef(null),
     },
     {
       id: 2,
-      heading: "Fitness Tracker APP",
+      heading: "HOUR TALLY APP",
       img_url: pic2,
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      ref: useRef(null),
-    },
-    {
-      id: 3,
-      heading: "Ali Abbas APP",
-      img_url: pic3,
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      link: "https://www.google.com",
+      desc: "Create, edit, and manage groups seamlessly on a platform developed using the MERN Stack. Authenticated through Firebase, users can efficiently collaborate, tallying the hours spent collectively on specific tasks. Additionally, users can easily add others to their groups, enhancing the collaborative experience.",
       ref: useRef(null),
     },
   ];
@@ -75,12 +70,12 @@ export default function App() {
         <About />
         <Skill />
       </section>
-      {/* <section className="bg_image1 h-[100vh] snap-center">
+      <section className="bg_image1 h-[100vh] snap-center">
         <Work projects={projects} />
       </section>
-      <section className="bg_image2 h-[100vh] snap-center flex items-center">
+      <section className="bg_image2 h-[100vh] snap-center flex justify-center lg:justify-start items-center">
         <Contact />
-      </section> */}
+      </section>
     </div>
   );
 }

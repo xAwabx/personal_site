@@ -7,8 +7,7 @@ import DOTS from "vanta/src/vanta.dots";
 import { useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import pic1 from "./Assets/Project_Thumbnails/TODO_Thumbnail.PNG";
-import pic2 from "./Assets/Project_Thumbnails/pic2.jpg";
-import pic3 from "./Assets/Project_Thumbnails/pic3.jpg";
+import pic2 from "./Assets/Project_Thumbnails/TALLY_Thumbnail.PNG";
 
 import { Work } from "./Work/Work";
 
@@ -26,7 +25,7 @@ export default function App() {
       id: 2,
       heading: "HOUR TALLY APP",
       img_url: pic2,
-      link: "https://www.google.com",
+      link: "https://tallyify-app.netlify.app",
       desc: "Create, edit, and manage groups seamlessly on a platform developed using the MERN Stack. Authenticated through Firebase, users can efficiently collaborate, tallying the hours spent collectively on specific tasks. Additionally, users can easily add others to their groups, enhancing the collaborative experience.",
       ref: useRef(null),
     },

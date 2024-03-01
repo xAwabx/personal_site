@@ -7,14 +7,17 @@ export const Skill = () => {
   const frontEnd = [
     "HTML",
     "CSS",
-
+    "TypeScript",
     "JavaScript",
-    "React",
-    "Express",
+    "Nextjs",
+    "Reactjs",
+    "Expressjs",
+    "Pusher",
     "Tailwind",
     "Framer-motion",
   ];
   const backEnd = [
+    "Nextjs",
     "Python",
     "Flask",
     "Express",
@@ -23,6 +26,8 @@ export const Skill = () => {
     "SQL",
     "REST APIs",
   ];
+
+  const languages = ["Python", "JavaScript", "TypeScript", "Dart"];
 
   const variants = {
     textbox: {
@@ -45,8 +50,6 @@ export const Skill = () => {
       },
     },
   };
-
-  const languages = ["Python", "JavaScript", "Dart"];
 
   return (
     <div className=" ">

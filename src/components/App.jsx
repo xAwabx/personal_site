@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import pic1 from "./Assets/Project_Thumbnails/TODO_Thumbnail.PNG";
 import pic2 from "./Assets/Project_Thumbnails/TALLY_Thumbnail.PNG";
+import pic3 from "./Assets/Project_Thumbnails/CHATAPP_Thumbnail.PNG";
 
 import { Work } from "./Work/Work";
 
@@ -27,6 +28,14 @@ export default function App() {
       img_url: pic2,
       link: "https://tallyify-app.netlify.app",
       desc: "Create, edit, and manage groups seamlessly on a platform developed using the MERN Stack. Authenticated through Firebase, users can efficiently collaborate, tallying the hours spent collectively on specific tasks. Additionally, users can easily add others to their groups, enhancing the collaborative experience.",
+      ref: useRef(null),
+    },
+    {
+      id: 3,
+      heading: "REAL-TIME CHAT APP",
+      img_url: pic3,
+      link: "https://chat-app-psi-murex-45.vercel.app/",
+      desc: "Real-time chat application that I designed and developed using TypeScript, Next.js, Pusher, Firebase, and Tailwind CSS. This dynamic platform enables you to effortlessly add and remove friends, send friend requests, and engage in seamless conversations within your personalized chatroom.",
       ref: useRef(null),
     },
   ];
